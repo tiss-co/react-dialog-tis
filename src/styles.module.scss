@@ -1,0 +1,147 @@
+$bg-blur-light: #e8e7e299;
+$bg-blur-dark: #161819cc;
+$font-normal-light: #2a2a2a;
+$font-normal-dark: #e5e6ec;
+$font-family-medium: Helvetica-Neue-Medium;
+$font-family-bold: Helvetica-Neue-Bold;
+$bg-box-light: #ffffff;
+$bg-box-dark: #242526;
+$bg-box-2-light: #e6e7eb;
+$bg-box-2-dark: #3a3b3c;
+$shadow-light: #c3c2c1;
+$shadow-dark: #161819;
+
+.Container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 500;
+  background-color: $bg-blur-light;
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  &.Dark {
+    background-color: $bg-blur-dark;
+  }
+}
+
+.Dialog {
+  z-index: 1000;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: auto;
+  width: fit-content !important;
+  min-width: 550px !important;
+  max-width: 90vw !important;
+  height: auto !important;
+  max-height: 70vh;
+  background-color: $bg-box-light !important;
+  margin: auto !important;
+  border-radius: 6px !important;
+  padding: 0 15px 15px 15px !important;
+  box-shadow: 0 0 4px $shadow-light !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  @media (max-width: 960px) {
+    width: 350px !important;
+    min-width: auto !important;
+  }
+  //Mobile
+  @media (hover: none) and (pointer: coarse) {
+    margin-top: 10vh !important;
+  }
+
+  > .Header {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: sticky;
+    background-color: $bg-box-light;
+    top: 0;
+    padding: 15px 0;
+    > .Title {
+      font-family: $font-family-medium;
+      font-size: var(--font-size-x-large);
+      color: $font-normal-light;
+    }
+    > .CloseCircle {
+      position: absolute;
+      right: 0;
+      padding: 2px !important;
+      cursor: pointer;
+      background-color: $bg-box-2-light;
+      border-radius: 50%;
+      width: 18px !important;
+      height: 18px !important;
+      > svg {
+        width: 15px !important;
+        height: 15px !important;
+        fill: $font-normal-light;
+        position: absolute;
+        top: calc(50% - 7.75px);
+        left: calc(50% - 7.6px);
+      }
+    }
+  }
+  > .Children {
+    height: auto;
+  }
+  > .Buttons {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    > .Button {
+      background-color: $bg-box-2-light !important;
+      border-radius: 8px !important;
+      font-family: $font-family-medium !important;
+      font-size: var(--font-size-x-large) !important;
+      color: $font-normal-light !important;
+      text-transform: none !important;
+      padding: 7px 15px !important;
+      margin: 10px !important;
+      border: none;
+      cursor: pointer;
+      &:active {
+        background-color: rgba(230, 231, 235, 0.75) !important;
+      }
+    }
+  }
+
+  &.Dark {
+    background-color: $bg-box-dark !important;
+    box-shadow: 0 0 4px $shadow-dark !important;
+
+    > .Header {
+      background-color: $bg-box-dark;
+      > .Title {
+        color: $font-normal-dark;
+      }
+      > .CloseCircle {
+        background-color: $bg-box-2-dark;
+        > svg {
+          fill: $font-normal-dark;
+        }
+      }
+    }
+    > .Buttons {
+      > .Button {
+        background-color: $bg-box-2-dark !important;
+        color: $font-normal-dark !important;
+        &:active {
+          background-color: rgba(58, 59, 60, 0.75) !important;
+        }
+      }
+    }
+  }
+}
