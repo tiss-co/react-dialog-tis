@@ -11,7 +11,7 @@ $bg-box-2-dark: #3a3b3c;
 $shadow-light: #c3c2c1;
 $shadow-dark: #161819;
 
-.Container {
+.Container_DialogTis {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,12 +24,12 @@ $shadow-dark: #161819;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  &.Dark {
+  &.Dark_DialogTis {
     background-color: $bg-blur-dark;
   }
 }
 
-.Dialog {
+.Dialog_DialogTis {
   z-index: 1000;
   box-sizing: border-box;
   display: flex;
@@ -58,7 +58,7 @@ $shadow-dark: #161819;
     margin-top: 10vh !important;
   }
 
-  > .Header {
+  > .Header_DialogTis {
     width: 100%;
     display: flex;
     flex-flow: row;
@@ -68,12 +68,12 @@ $shadow-dark: #161819;
     background-color: $bg-box-light;
     top: 0;
     padding: 15px 0;
-    > .Title {
+    > .Title_DialogTis {
       font-family: $font-family-medium;
       font-size: var(--font-size-x-large);
       color: $font-normal-light;
     }
-    > .CloseCircle {
+    > .CloseCircle_DialogTis {
       position: absolute;
       right: 0;
       padding: 2px !important;
@@ -92,16 +92,16 @@ $shadow-dark: #161819;
       }
     }
   }
-  > .Children {
+  > .Children_DialogTis {
     height: auto;
   }
-  > .Buttons {
+  > .Buttons_DialogTis {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    > .Button {
+    > .Button_DialogTis {
       background-color: $bg-box-2-light !important;
       border-radius: 8px !important;
       font-family: $font-family-medium !important;
@@ -118,24 +118,24 @@ $shadow-dark: #161819;
     }
   }
 
-  &.Dark {
+  &.Dark_DialogTis {
     background-color: $bg-box-dark !important;
     box-shadow: 0 0 4px $shadow-dark !important;
 
-    > .Header {
+    > .Header_DialogTis {
       background-color: $bg-box-dark;
-      > .Title {
+      > .Title_DialogTis {
         color: $font-normal-dark;
       }
-      > .CloseCircle {
+      > .CloseCircle_DialogTis {
         background-color: $bg-box-2-dark;
         > svg {
           fill: $font-normal-dark;
         }
       }
     }
-    > .Buttons {
-      > .Button {
+    > .Buttons_DialogTis {
+      > .Button_DialogTis {
         background-color: $bg-box-2-dark !important;
         color: $font-normal-dark !important;
         &:active {

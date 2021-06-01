@@ -14,30 +14,30 @@ export const Dialog = ({
   children
 }) => (
   open &&
-  <div className={classNames(css.Container, {
-    [css.Dark]: darkMode,
+  <div className={classNames(css.Container_DialogTis, {
+    [css.Dark_DialogTis]: darkMode,
   }, className)}>
     <div
-      className={classNames(css.Dialog, {
-        [css.Dark]: darkMode,
+      className={classNames(css.Dialog_DialogTis, {
+        [css.Dark_DialogTis]: darkMode,
       }, className)}
     >
-      <div className={css.Header}>
-        <span className={css.Title}>
+      <div className={css.Header_DialogTis}>
+        <span className={css.Title_DialogTis}>
           {title}
         </span>
-        <div className={css.CloseCircle} onClick={onClose}>
+        <div className={css.CloseCircle_DialogTis} onClick={onClose}>
           <CloseIcon />
         </div>
       </div>
-      <div className={css.Children}>
+      <div className={css.Children_DialogTis}>
         {children}
       </div>
-      <div className={css.Buttons}>
+      <div className={css.Buttons_DialogTis}>
         {
           buttons?.length > 0 &&
           buttons.map(({ text, onClick }) =>
-            <button key={text} className={css.Button} onClick={onClick}>
+            <button key={text} className={css.Button_DialogTis} onClick={onClick}>
               {text}
             </button>
           )
