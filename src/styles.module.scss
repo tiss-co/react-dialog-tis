@@ -38,7 +38,7 @@ $shadow-dark: #161819;
   justify-content: flex-start;
   overflow: auto;
   width: fit-content !important;
-  min-width: 550px !important;
+  // min-width: 550px !important;
   max-width: 90vw !important;
   height: auto !important;
   max-height: 70vh;
@@ -94,6 +94,7 @@ $shadow-dark: #161819;
   }
   > .Children_DialogTis {
     height: auto;
+    width: fit-content !important;
   }
   > .Buttons_DialogTis {
     display: flex;
