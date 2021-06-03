@@ -59,7 +59,7 @@ $shadow-dark: #161819;
   }
 
   > .Header_DialogTis {
-    width: 100%;
+    width: 100% !important;
     display: flex;
     flex-flow: row;
     align-items: center;
