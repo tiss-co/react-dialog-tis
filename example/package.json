@@ -10,10 +10,12 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
     "react": "link:../node_modules/react",
+    "react-dialog-tis": "link:..",
     "react-dom": "link:../node_modules/react-dom",
-    "react-scripts": "link:../node_modules/react-scripts",
-    "react-dialog-tis": "link:.."
+    "react-input-tis": "^1.0.3",
+    "react-scripts": "link:../node_modules/react-scripts"
   },
   "devDependencies": {
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
