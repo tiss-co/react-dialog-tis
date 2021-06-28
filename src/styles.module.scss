@@ -71,6 +71,7 @@ $border-dark: #4d535b;
     background-color: $bg-box-light;
     top: 0;
     z-index: 1002 !important;
+    padding: 15px 0;
     &.HeaderBorder_DialogTis {
       border-bottom: 1px solid $border-light;
       margin-bottom: 10px;
