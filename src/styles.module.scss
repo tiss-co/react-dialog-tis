@@ -10,6 +10,8 @@ $bg-box-2-light: #e6e7eb;
 $bg-box-2-dark: #3a3b3c;
 $shadow-light: #c3c2c1;
 $shadow-dark: #161819;
+$border-light: #d5d5d3;
+$border-dark: #4d535b;
 
 .Container_DialogTis {
   position: fixed;
@@ -68,6 +70,10 @@ $shadow-dark: #161819;
     background-color: $bg-box-light;
     top: 0;
     padding: 15px 0;
+    &.HeaderBorder_DialogTis {
+      border-bottom: 1px solid $border-light;
+      margin-bottom: 10px;
+    }
     > .Title_DialogTis {
       font-family: $font-family-medium;
       font-size: var(--font-size-xx-large);
@@ -125,6 +131,9 @@ $shadow-dark: #161819;
 
     > .Header_DialogTis {
       background-color: $bg-box-dark;
+      &.HeaderBorder_DialogTis {
+        border-bottom: 1px solid $border-light;
+      }
       > .Title_DialogTis {
         color: $font-normal-dark;
       }

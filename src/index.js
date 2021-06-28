@@ -6,12 +6,14 @@ import css from './styles.module.scss';
 
 export const Dialog = ({
   className,
+  titleClassName = '',
   title,
   buttons,
   open,
   onClose,
   darkMode,
-  children
+  titleBorder = false,
+  children,
 }) => (
   open &&
   <div className={classNames(css.Container_DialogTis, {
@@ -22,8 +24,10 @@ export const Dialog = ({
         [css.Dark_DialogTis]: darkMode,
       }, className)}
     >
-      <div className={css.Header_DialogTis}>
-        <span className={css.Title_DialogTis}>
+      <div className={classNames(css.Header_DialogTis, {
+        [css.HeaderBorder_DialogTis]: titleBorder
+      })}>
+        <span className={classNames(css.Title_DialogTis, titleClassName)}>
           {title}
         </span>
         <div className={css.CloseCircle_DialogTis} onClick={onClose}>
@@ -36,9 +40,12 @@ export const Dialog = ({
       <div className={css.Buttons_DialogTis}>
         {
           buttons?.length > 0 &&
-          buttons.map(({ text, onClick }) =>
-            <button key={text} className={css.Button_DialogTis} onClick={onClick}>
-              {text}
+          buttons.map(({ text, onClick, leftIcon = null, rightIcon = null, className = '' }) =>
+            <button
+              key={text}
+              className={classNames(css.Button_DialogTis, className)}
+              onClick={onClick}>
+              {leftIcon} {text} {rightIcon}
             </button>
           )
         }
@@ -50,6 +57,7 @@ export const Dialog = ({
 Dialog.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
+  titleClassName: PropTypes.string,
   buttons: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
@@ -58,5 +66,6 @@ Dialog.propTypes = {
   ),
   open: PropTypes.bool,
   darkMode: PropTypes.bool,
+  titleBorder: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
 };

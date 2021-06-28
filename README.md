@@ -37,14 +37,19 @@ const App = () => {
       <Dialog
         className='Dialog'
         title='GitHub'
+        titleClassName='Title'
         open={open}
         onClose={() => setOpen(false)}
         buttons={[
           {
             text: 'OK',
-            onClick: () => setOpen(false)
+            onClick: () => setOpen(false),
+            className: 'Button',
+            leftIcon: //some icon,
+            rightIcon: //some icon
           }
         ]}
+        titleBorder={true}
         darkMode={false}
       >
         //Your Component
