@@ -13,6 +13,7 @@ export const Dialog = ({
   onClose,
   darkMode,
   titleBorder = false,
+  hideTitleRow = false,
   children,
 }) => (
   open &&
@@ -24,16 +25,19 @@ export const Dialog = ({
         [css.Dark_DialogTis]: darkMode,
       }, className)}
     >
-      <div className={classNames(css.Header_DialogTis, {
-        [css.HeaderBorder_DialogTis]: titleBorder
-      })}>
-        <span className={classNames(css.Title_DialogTis, titleClassName)}>
-          {title}
-        </span>
-        <div className={css.CloseCircle_DialogTis} onClick={onClose}>
-          <CloseIcon />
+      {
+        !hideTitleRow &&
+        <div className={classNames(css.Header_DialogTis, {
+          [css.HeaderBorder_DialogTis]: titleBorder
+        })}>
+          <span className={classNames(css.Title_DialogTis, titleClassName)}>
+            {title}
+          </span>
+          <div className={css.CloseCircle_DialogTis} onClick={onClose}>
+            <CloseIcon />
+          </div>
         </div>
-      </div>
+      }
       <div className={css.Children_DialogTis}>
         {children}
       </div>
@@ -68,4 +72,5 @@ Dialog.propTypes = {
   darkMode: PropTypes.bool,
   titleBorder: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
+  hideTitleRow: PropTypes.bool,
 };
