@@ -22,6 +22,7 @@ export const Dialog = ({
   }, className)}>
     <div
       className={classNames(css.Dialog_DialogTis, {
+        [css.PaddingTop_DialogTis]: hideTitleRow,
         [css.Dark_DialogTis]: darkMode,
       }, className)}
     >
