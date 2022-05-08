@@ -15,11 +15,13 @@ export const Dialog = ({
   titleBorder = false,
   hideTitleRow = false,
   children,
+  id,
 }) => (
   open &&
   <div className={classNames(css.Container_DialogTis, {
     [css.Dark_DialogTis]: darkMode,
-  }, className)}>
+  }, className)}
+    id={id}>
     <div
       className={classNames(css.Dialog_DialogTis, {
         [css.PaddingTop_DialogTis]: hideTitleRow,
@@ -74,4 +76,5 @@ Dialog.propTypes = {
   titleBorder: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
   hideTitleRow: PropTypes.bool,
+  id: PropTypes.string,
 };
