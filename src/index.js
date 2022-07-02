@@ -16,6 +16,7 @@ export const Dialog = ({
   hideTitleRow = false,
   children,
   id,
+  closeButtonId
 }) => (
   open &&
   <div className={classNames(css.Container_DialogTis, {
@@ -37,7 +38,7 @@ export const Dialog = ({
             {title}
           </span>
           <div className={css.CloseCircle_DialogTis} onClick={onClose}>
-            <CloseIcon />
+            <CloseIcon id={closeButtonId} />
           </div>
         </div>
       }
@@ -77,4 +78,5 @@ Dialog.propTypes = {
   onClose: PropTypes.func.isRequired,
   hideTitleRow: PropTypes.bool,
   id: PropTypes.string,
+  closeButtonId: PropTypes.string,
 };
