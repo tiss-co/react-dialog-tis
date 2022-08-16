@@ -2,8 +2,6 @@ $bg-blur-light: #e8e7e299;
 $bg-blur-dark: #161819cc;
 $font-normal-light: #2a2a2a;
 $font-normal-dark: #e5e6ec;
-$font-family-medium: Helvetica-Neue-Medium;
-$font-family-bold: Helvetica-Neue-Bold;
 $bg-box-light: #ffffff;
 $bg-box-dark: #242526;
 $bg-box-2-light: #e6e7eb;
@@ -81,7 +79,6 @@ $border-dark: #4d535b;
       margin-bottom: 10px;
     }
     > .Title_DialogTis {
-      font-family: $font-family-medium;
       font-size: var(--font-size-xx-large);
       color: $font-normal-light;
       margin-left: 15px;
@@ -121,7 +118,6 @@ $border-dark: #4d535b;
     > .Button_DialogTis {
       background-color: $bg-box-2-light !important;
       border-radius: 8px !important;
-      font-family: $font-family-medium !important;
       font-size: var(--font-size-x-large) !important;
       color: $font-normal-light !important;
       text-transform: none !important;
